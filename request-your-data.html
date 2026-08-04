@@ -7,9 +7,23 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
     />
     <title>Request Your Data | What's Your Data Mass Index?</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CVJGT09L8F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CVJGT09L8F");
+    </script>
     <meta
       name="description"
-      content="Exercise your right to see and delete the data companies have collected about you with a DSAR."
+      content="Exercise your right to see the data companies have collected about you with a DSAR."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,12 +70,16 @@
               ><span class="draw-underline">Take Action</span></a
             >
             <a
-              href="https://www.consumerreports.org/make-the-price-right/
-"
+              href="https://www.consumerreports.org/make-the-price-right/"
+              target="_blank"
+              rel="noopener"
               class="pill pill-pink"
               ><span class="draw-underline">Read the Report</span></a
             >
-            <a href="index.html" class="pill pill-lime"
+            <a
+              href="images/GIMMEMYDATA_Zine.png"
+              taret="_blank"
+              class="pill pill-lime"
               ><span class="draw-underline">Download Zine</span></a
             >
           </nav>
@@ -259,9 +277,10 @@
                 hidden
               >
                 <p>
-                  In most states, companies have up to 45 days to respond. And
-                  they can request an extension for an additional 45 days to
-                  respond.
+                  In most states, like California, companies have up to 45 days
+                  to respond. And they can request an extension for an
+                  additional 45 days to respond. Some requests can take a couple
+                  of minutes or days to get back to you.
                 </p>
               </div>
             </div>
@@ -287,9 +306,9 @@
               >
                 <p>
                   Some companies will ask for a photo ID to "verify your
-                  identity" before sending the data. It's annoying, but standard
-                  practice. Feel free to redact sensitive numbers before sending
-                  it over.
+                  identity" before sending the data. Other companies will ask
+                  for more detailed information about you, but that data legally
+                  can't be used for anything other than your data request.
                 </p>
               </div>
             </div>
@@ -314,9 +333,39 @@
                 hidden
               >
                 <p>
-                  Usually a chaotic zip file full of CSVs or JSON files. You'll
-                  see every purchase, location ping, ad interaction, and
-                  customer service chat they've logged.
+                  Usually a big zip file full of CSVs or JSON files. You'll see
+                  every purchase, location ping, ad interaction, and customer
+                  service chat they've logged.
+                </p>
+              </div>
+            </div>
+
+            <div class="ryd-accordion-item">
+              <button
+                type="button"
+                class="ryd-accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+                id="faq-trigger-4"
+                data-testid="button-faq-what-data"
+              >
+                Who can I contact if I have questions?
+                <span class="ryd-accordion-chevron" aria-hidden="true">▾</span>
+              </button>
+              <div
+                class="ryd-accordion-panel"
+                id="faq-panel-4"
+                role="region"
+                aria-labelledby="faq-trigger-4"
+                hidden
+              >
+                <p>
+                  Email the Community Reports team at Consumer Reports
+                  <a
+                    href="mailto:community@cr.consumer.org?subject=GIMMEMYDATA Inquiry "
+                    >community@cr.consumer.org</a
+                  >
+                  with any questions
                 </p>
               </div>
             </div>
