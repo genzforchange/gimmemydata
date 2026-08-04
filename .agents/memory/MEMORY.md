@@ -1,0 +1,4 @@
+- [serve static hosting (multi-page)](serve-static-hosting.md) — never use `serve -s` on a multi-page static site; SPA fallback makes every subpage render index.html.
+- [Scrollytelling no-flash setup](scrollytelling-no-flash.md) — when JS upgrades a static fallback layout into an animated one, gate transitions behind a "ready" class added a frame later, or the fallback visibly fades out on load.
+- [Mobile viewport units](mobile-viewport-units.md) — pinned scrollytelling must use svh + visualViewport, never vh/dvh/innerHeight; ignore URL-bar-driven height-only resizes on touch.
+- [Mockup sandbox install quirks](mockup-sandbox-install.md) — npm install in artifacts/mockup-sandbox can fail ENOTEMPTY; wipe node_modules and reinstall. scripts/post-merge.sh now runs the install after merges.

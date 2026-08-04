@@ -1,0 +1,332 @@
+<div class="hiw-story">
+  <div class="hiw-stage">
+    <!-- ── Scene 1: collection ──
+         Each text beat (and the visual it introduces) shares a d-class;
+         JS reveals d1..dN in order as the visitor scrolls. data-beats tells
+         the scroll driver how many beats this scene has. -->
+    <section
+      class="scene"
+      id="scene-collect"
+      aria-label="Data collection"
+      data-beats="7"
+    >
+      <div class="scene-inner">
+        <p class="scene-statement beat anim d1">
+          So much of what you do every day generates data&hellip;
+        </p>
+        <div class="scene-visual">
+          <div class="visual-row">
+            <figure class="zi-item anim anim--pop d2">
+              <img
+                src="images/zine-loyaltycard.png"
+                alt=""
+                class="zi zi-card"
+              />
+              <figcaption class="zi-label">your loyalty card</figcaption>
+            </figure>
+            <figure class="zi-item anim anim--pop d3">
+              <img src="images/zine-phone.png" alt="" class="zi zi-phone" />
+              <figcaption class="zi-label">your apps</figcaption>
+            </figure>
+            <figure class="zi-item anim anim--pop d4">
+              <div class="zi-cart-group">
+                <img
+                  src="images/zine-pear.png"
+                  alt=""
+                  class="zi zi-fruit zi-fruit-1"
+                />
+                <img
+                  src="images/zine-banana.png"
+                  alt=""
+                  class="zi zi-fruit zi-fruit-2"
+                />
+                <img
+                  src="images/zine-orange.png"
+                  alt=""
+                  class="zi zi-fruit zi-fruit-3"
+                />
+                <img
+                  src="images/zine-shoppingcart.png"
+                  alt=""
+                  class="zi zi-cart"
+                />
+              </div>
+              <figcaption class="zi-label">your groceries</figcaption>
+            </figure>
+
+            <svg
+              class="zi-stream anim d5"
+              viewBox="0 0 120 60"
+              aria-hidden="true"
+            >
+              <path class="stream" d="M8 30 H88" />
+              <polygon class="arrow" points="112,30 88,19 88,41" />
+              <circle cx="30" cy="30" r="5" fill="var(--pink)" />
+              <circle cx="86" cy="30" r="5" fill="var(--blue)" />
+              <g>
+                <circle cx="58" cy="8" r="13" fill="var(--green)" />
+                <text x="58" y="14" text-anchor="middle" class="zi-coin-text">
+                  $
+                </text>
+              </g>
+            </svg>
+
+            <div class="broker-box anim anim--pop d6">
+              <span class="broker-title">data brokers</span>
+              <div class="broker-rows" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="scene-statement beat anim d5">
+          And once it&rsquo;s collected, it doesn&rsquo;t stay with the company
+          you gave it to.
+        </p>
+        <p class="scene-statement beat anim d6">
+          Data brokers buy it and combine it into a profile of you.
+        </p>
+        <p class="scene-statement beat anim d7">
+          Your data is their product&hellip; and you&rsquo;ve never even heard
+          of them!
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Scene 2: inferences ── -->
+    <section
+      class="scene"
+      id="scene-infer"
+      aria-label="Inferences"
+      data-beats="6"
+    >
+      <div class="scene-inner">
+        <p class="scene-statement beat anim d1">
+          From that data, brokers generate thousands of inferences about you:
+        </p>
+        <div class="scene-visual">
+          <div class="visual-row">
+            <figure class="zi-item anim d1">
+              <div class="zi-profile-group">
+                <img
+                  src="images/zine-loyaltycard.png"
+                  alt=""
+                  class="zi zi-profile"
+                />
+                <span class="stamp-pos anim anim--pop d5"
+                  ><span class="hiw-stamp">often wrong</span></span
+                >
+              </div>
+              <figcaption class="zi-label">
+                the profile they build about you
+              </figcaption>
+            </figure>
+            <div class="chip-stack">
+              <span class="hiw-chip chip-lime anim anim--pop d2"
+                >income: $74,000?</span
+              >
+              <span class="hiw-chip chip-sky anim anim--pop d3"
+                >renter: likely</span
+              >
+              <span class="hiw-chip chip-pink anim anim--pop d4"
+                >health: anxiety?</span
+              >
+            </div>
+            <div class="sold-group anim d6">
+              <svg
+                class="zi-stream zi-stream--sold"
+                viewBox="0 0 120 60"
+                aria-hidden="true"
+              >
+                <path class="stream" d="M8 30 H88" />
+                <polygon class="arrow" points="112,30 88,19 88,41" />
+                <g>
+                  <circle cx="52" cy="8" r="13" fill="var(--green)" />
+                  <text x="52" y="14" text-anchor="middle" class="zi-coin-text">
+                    $
+                  </text>
+                </g>
+              </svg>
+              <span class="hiw-chip chip-navy">sold as fact</span>
+            </div>
+          </div>
+        </div>
+        <p class="scene-statement beat anim d5">
+          These inferences are guesses &mdash; your income, your housing, even
+          your health &mdash; and they&rsquo;re often wrong.
+        </p>
+        <p class="scene-statement beat anim d6">
+          But they&rsquo;re packaged and sold as fact.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Scene 3: the buyers ── -->
+    <section
+      class="scene"
+      id="scene-buyers"
+      aria-label="Who buys it"
+      data-beats="5"
+    >
+      <div class="scene-inner">
+        <p class="scene-statement beat anim d1">
+          The companies you shop with sell your information to data brokers
+          &mdash; who resell your profile again and again.
+        </p>
+        <div class="scene-visual">
+          <div class="visual-row buyers-diagram">
+            <figure class="zi-item anim d1">
+              <img
+                src="images/zine-loyaltycard.png"
+                alt=""
+                class="zi zi-card"
+              />
+              <figcaption class="zi-label">your profile</figcaption>
+            </figure>
+
+            <svg class="zi-fan" viewBox="0 0 140 300" aria-hidden="true">
+              <path
+                class="stream anim d2"
+                d="M10 150 C 60 145, 75 65, 114 48"
+              />
+              <polygon
+                class="arrow anim anim--pop d2"
+                points="132,42 110,38 116,59"
+              />
+              <path class="stream anim d3" d="M10 150 H112" />
+              <polygon
+                class="arrow anim anim--pop d3"
+                points="132,150 110,140 110,160"
+              />
+              <path
+                class="stream anim d4"
+                d="M10 150 C 60 155, 75 235, 114 252"
+              />
+              <polygon
+                class="arrow anim anim--pop d4"
+                points="132,258 116,241 110,262"
+              />
+            </svg>
+
+            <div class="buyer-list">
+              <div class="buyer-node anim d2">
+                <div class="zi-meter-group">
+                  <svg class="zi-meter" viewBox="0 0 120 80" aria-hidden="true">
+                    <path
+                      class="meter-seg"
+                      d="M16 64 A44 44 0 0 1 28.9 32.9"
+                      stroke="var(--green)"
+                    />
+                    <path
+                      class="meter-seg"
+                      d="M28.9 32.9 A44 44 0 0 1 60 20"
+                      stroke="var(--lime)"
+                    />
+                    <path
+                      class="meter-seg"
+                      d="M60 20 A44 44 0 0 1 91.1 32.9"
+                      stroke="var(--orange)"
+                    />
+                    <path
+                      class="meter-seg"
+                      d="M91.1 32.9 A44 44 0 0 1 104 64"
+                      stroke="var(--pink)"
+                    />
+                    <text x="12" y="78" class="meter-txt" fill="var(--green)">
+                      LOW
+                    </text>
+                    <text x="92" y="78" class="meter-txt" fill="var(--pink)">
+                      HIGH
+                    </text>
+                    <g class="meter-needle">
+                      <polygon
+                        points="56.5,64 60,26 63.5,64"
+                        fill="var(--navy)"
+                      />
+                      <circle cx="60" cy="64" r="5.5" fill="var(--navy)" />
+                    </g>
+                  </svg>
+                  <span class="rate-tag anim anim--pop d2">$180/mo</span>
+                </div>
+                <span class="zi-label"
+                  >insurers &mdash; your profile sets your rate</span
+                >
+              </div>
+              <div class="buyer-node anim d3">
+                <div class="zi-register-group zi-register-group--sm">
+                  <img
+                    src="images/zine-cash-register.png"
+                    alt=""
+                    class="zi zi-register"
+                  />
+                  <span class="price-tag price-tag-a anim anim--pop d3"
+                    >$60</span
+                  >
+                  <span class="price-tag price-tag-b anim anim--pop d3"
+                    >$95</span
+                  >
+                </div>
+                <span class="zi-label"
+                  >retailers &mdash; same product, your price</span
+                >
+              </div>
+              <div class="buyer-node anim d4">
+                <svg class="zi-pin" viewBox="0 0 80 100" aria-hidden="true">
+                  <path
+                    d="M40 6 C22 6 10 20 10 37 C10 62 40 94 40 94 C40 94 70 62 70 37 C70 20 58 6 40 6 Z"
+                    fill="var(--orange)"
+                  />
+                  <circle cx="40" cy="36" r="12" fill="var(--cream)" />
+                </svg>
+                <span class="zi-label"
+                  >government agencies &mdash; surveilling your neighbors</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="scene-statement beat anim d5">
+          ICE has bought data broker profiles to access personal and location
+          information it would otherwise need a warrant to obtain.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Scene 4: request your data ── -->
+    <section
+      class="scene scene--payoff"
+      id="scene-payoff"
+      aria-label="Request your data"
+      data-beats="3"
+    >
+      <div class="scene-inner scene-inner--center">
+        <p class="scene-statement beat anim d1">
+          What do they know about you? Where is it being used against you? Is it
+          even correct?!! Should they even have this data about you?
+        </p>
+        <div class="scene-visual">
+          <div class="visual-row">
+            <figure class="zi-item anim anim--pop d2">
+              <div class="zi-question-group">
+                <img
+                  src="images/zine-loyaltycard.png"
+                  alt=""
+                  class="zi zi-profile"
+                />
+                <span class="zi-question" aria-hidden="true">?</span>
+              </div>
+              <figcaption class="zi-label anim d3">
+                You have no way to know &mdash; unless you request your data.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>scroll</span>
+      <span class="scroll-cue-arrow">&darr;</span>
+    </div>
+  </div>
+</div>

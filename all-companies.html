@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <title>All Companies | What's Your Data Mass Index?</title>
+    <meta
+      name="description"
+      content="Browse every company you can send a data request to, filtered by category."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/tzf2elr.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="images/favicon-180.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Background texture -->
+      <div class="bg-texture" aria-hidden="true">
+        <img
+          src="images/background-texture.jpg"
+          alt="background image texture paper"
+        />
+      </div>
+
+      <!-- Nav bar -->
+      <header class="nav-bar">
+        <a href="index.html#content" class="nav-logo-link"
+          ><img
+            src="images/gimme%20my%20data%20logo%20wip.png"
+            alt="Gimme My Data — home"
+            class="nav-logo"
+        /></a>
+        <div class="nav-frame">
+          <nav class="nav-pills">
+            <a href="request-your-data.html" class="pill pill-navy"
+              ><span class="draw-underline">Request Your Data</span></a
+            >
+            <!-- <a href="take-action.html" class="pill pill-green"> -->
+            <a
+              href="https://speak4.app/lp/7q013s5y?utm_source=gz4c"
+              target="_blank"
+              rel="noopener"
+              class="pill pill-green"
+              ><span class="draw-underline">Take Action</span></a
+            >
+            <a
+              href="https://www.consumerreports.org/make-the-price-right/
+"
+              class="pill pill-pink"
+              ><span class="draw-underline">Read the Report</span></a
+            >
+            <a href="index.html" class="pill pill-lime"
+              ><span class="draw-underline">Download Zine</span></a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <main class="subpage-main ryd-main">
+        <!-- Hero headline -->
+        <section class="hero">
+          <h1 class="headline">All Companies</h1>
+        </section>
+
+        <!-- Intro -->
+        <section class="ryd-intro" data-testid="section-all-companies-intro">
+          <p class="ryd-intro-lead">
+            Every company we've mapped out a data request for, all in one place
+            and ppdated regularly! Use the filters to browse by category.
+          </p>
+        </section>
+
+        <!-- Filter buttons (generated from live sheet data) -->
+        <section class="ryd-filters" data-testid="section-filters"></section>
+
+        <!-- Company card gallery (live-synced from Google Sheet) -->
+        <section class="ryd-gallery" data-testid="section-company-gallery">
+          <p
+            class="ryd-companies-status"
+            id="companies-status"
+            data-testid="companies-status"
+            hidden
+          ></p>
+          <div class="ryd-grid" id="all-companies-grid"></div>
+
+          <!-- Empty-category state -->
+          <div
+            class="ryd-filter-empty"
+            id="filter-empty-state"
+            data-testid="filter-empty-state"
+            hidden
+          >
+            <div class="ryd-card ryd-card-empty ryd-rotate-r1">
+              <div>
+                <div class="ryd-card-tag ryd-tag-lime">
+                  <h2 class="ryd-card-name">Coming Soon!</h2>
+                </div>
+                <ol class="ryd-steps">
+                  <li>
+                    We're still cooking up data request guides for this
+                    category. Check back soon!
+                  </li>
+                </ol>
+              </div>
+              <span class="ryd-button ryd-empty-button">Coming Soon</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="ryd-see-more">
+          <a
+            href="request-your-data.html"
+            class="ryd-button ryd-see-more-button"
+            data-testid="button-back-to-dsar"
+            >&larr; Back to Request Your Data</a
+          >
+        </div>
+      </main>
+
+      <!-- Footer bar -->
+      <footer class="footer-bar">
+        <a
+          href="https://genzforchange.org/"
+          target="_blank"
+          class="footer-link"
+          data-testid="link-footer-credit"
+        >
+          <span class="footer-credit draw-underline"
+            >made with ❤️ by gen-z for change's meddling kids</span
+          >
+        </a>
+
+        <div class="footer-secondary">
+          <a
+            href="https://www.consumerreports.org/make-the-price-right/"
+            target="_blank"
+            class="footer-link"
+            data-testid="link-footer-cr"
+          >
+            <span class="footer-secondary-credit"
+              >research provided by consumer reports</span
+            >
+          </a>
+          <span class="footer-dot" aria-hidden="true">|</span>
+          <a
+            href="https://airtable.com/appoqjcdQLQO9q2tL/pag53Z9THFAOwPLtT/form"
+            target="_blank"
+            class="footer-link"
+            data-testid="link-footer-report"
+          >
+            <span class="footer-secondary-credit">report an issue</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="companies-live.js"></script>
+  </body>
+</html>

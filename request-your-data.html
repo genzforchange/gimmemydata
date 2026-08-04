@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <title>Request Your Data | What's Your Data Mass Index?</title>
+    <meta
+      name="description"
+      content="Exercise your right to see and delete the data companies have collected about you with a DSAR."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/tzf2elr.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="images/favicon-180.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Background texture -->
+      <div class="bg-texture" aria-hidden="true">
+        <img
+          src="images/background-texture.jpg"
+          alt="background image texture paper"
+        />
+      </div>
+
+      <!-- Nav bar -->
+      <header class="nav-bar">
+        <a href="index.html#content" class="nav-logo-link"
+          ><img
+            src="images/gimme%20my%20data%20logo%20wip.png"
+            alt="Gimme My Data — home"
+            class="nav-logo"
+        /></a>
+        <div class="nav-frame">
+          <nav class="nav-pills">
+            <a href="request-your-data.html" class="pill pill-navy"
+              ><span class="draw-underline">Request Your Data</span></a
+            >
+            <!-- <a href="take-action.html" class="pill pill-green"> -->
+            <a
+              href="https://speak4.app/lp/7q013s5y?utm_source=gz4c"
+              target="_blank"
+              rel="noopener"
+              class="pill pill-green"
+              ><span class="draw-underline">Take Action</span></a
+            >
+            <a
+              href="https://www.consumerreports.org/make-the-price-right/
+"
+              class="pill pill-pink"
+              ><span class="draw-underline">Read the Report</span></a
+            >
+            <a href="index.html" class="pill pill-lime"
+              ><span class="draw-underline">Download Zine</span></a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <main class="subpage-main ryd-main">
+        <!-- Hero headline -->
+        <section class="hero">
+          <h1 class="headline">Request Your Data</h1>
+        </section>
+
+        <!-- Intro / DSAR explainer -->
+        <section class="ryd-intro" data-testid="section-dsar-intro">
+          <p class="ryd-intro-lead">
+            A DSAR stands for
+            <strong>Data Subject Access Request</strong>. It's your legal right
+            to demand a copy of all the creepy, detailed info these companies
+            have on you.
+          </p>
+          <p class="ryd-intro-body">
+            You can file DSARs with the companies people pay and shop with every
+            day, from car brands, banks, and grocery stores to streaming
+            services, utilities, and 401k funds, plus the data brokers who
+            quietly trade our information behind the scenes. Request your data,
+            take action, and help us build the case for stronger privacy for
+            everyone.
+          </p>
+        </section>
+
+        <!-- Company card gallery -->
+        <section class="ryd-gallery" data-testid="section-company-gallery">
+          <p
+            class="ryd-companies-status"
+            id="companies-status"
+            data-testid="companies-status"
+            hidden
+          ></p>
+          <div class="ryd-grid" id="pinned-companies-grid"></div>
+
+          <div class="ryd-see-more">
+            <a
+              href="all-companies.html"
+              class="ryd-button ryd-see-more-button"
+              data-testid="button-see-more-companies"
+              >See More Companies
+              <span class="ryd-see-more-arrow" aria-hidden="true"
+                >&rarr;</span
+              ></a
+            >
+          </div>
+        </section>
+
+        <!-- How to read your report -->
+        <section
+          class="ryd-report"
+          id="read-report"
+          data-testid="section-read-report"
+        >
+          <h2 class="ryd-faq-heading">How to Read Your Report</h2>
+          <p class="ryd-report-intro">
+            Depending on what state you're from, your report could include the
+            basics they have on you (name, address, phone), guesses about your
+            income and lifestyle, inferences about your shopping, health &amp;
+            money, and the third parties they sold your data to.
+          </p>
+
+          <div
+            class="ryd-clip-grid"
+            role="img"
+            aria-label="Four sample clippings from a fake data broker report for a fictional person, Jane Q. Sample: personal identifiers, personal characteristics, inferences, and third parties."
+          >
+            <div
+              class="ryd-clip ryd-rotate-l1"
+              data-testid="report-item-identifiers"
+            >
+              <div class="ryd-clip-doc">
+                <h3 class="ryd-clip-title">Personal Identifiers</h3>
+                <table class="ryd-mock-table">
+                  <tr>
+                    <td>Name</td>
+                    <td>Jane Q. Sample</td>
+                  </tr>
+                  <tr>
+                    <td>Address</td>
+                    <td>123 Example Ave</td>
+                  </tr>
+                  <tr>
+                    <td>Phone</td>
+                    <td>(555) 555-0123</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div
+              class="ryd-clip ryd-rotate-r1"
+              data-testid="report-item-characteristics"
+            >
+              <div class="ryd-clip-doc">
+                <h3 class="ryd-clip-title">Personal Characteristics</h3>
+                <table class="ryd-mock-table">
+                  <tr>
+                    <td>Est. income</td>
+                    <td>$65k&ndash;$80k</td>
+                  </tr>
+                  <tr>
+                    <td>Housing</td>
+                    <td>Likely renter</td>
+                  </tr>
+                  <tr>
+                    <td>Education</td>
+                    <td>Some college (?)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div
+              class="ryd-clip ryd-rotate-r2"
+              data-testid="report-item-inferences"
+            >
+              <div class="ryd-clip-doc">
+                <h3 class="ryd-clip-title">Inferences</h3>
+                <table class="ryd-mock-table">
+                  <tr>
+                    <td>Shops at</td>
+                    <td>Big Box Mart</td>
+                  </tr>
+                  <tr>
+                    <td>Health</td>
+                    <td>&ldquo;Wellness seeker&rdquo;</td>
+                  </tr>
+                  <tr>
+                    <td>Finances</td>
+                    <td>&ldquo;Budget conscious&rdquo;</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div
+              class="ryd-clip ryd-rotate-l2"
+              data-testid="report-item-third-parties"
+            >
+              <div class="ryd-clip-doc">
+                <h3 class="ryd-clip-title">Third Parties</h3>
+                <table class="ryd-mock-table">
+                  <tr>
+                    <td>Brokers</td>
+                    <td>InfoHarvest LLC</td>
+                  </tr>
+                  <tr>
+                    <td>Retail</td>
+                    <td>Big Box Mart</td>
+                  </tr>
+                  <tr>
+                    <td>Insurance</td>
+                    <td>Acme Insurance</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <p class="ryd-report-caveat">
+            Please note: depending on what state you're from, your real report
+            may include more, less, or slightly different categories than this
+            sample.
+          </p>
+        </section>
+
+        <!-- FAQ -->
+        <section class="ryd-faq" data-testid="section-faq">
+          <h2 class="ryd-faq-heading">FAQ / What to Expect</h2>
+
+          <div class="ryd-accordion">
+            <div class="ryd-accordion-item">
+              <button
+                type="button"
+                class="ryd-accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-1"
+                id="faq-trigger-1"
+                data-testid="button-faq-how-long"
+              >
+                How long does this take?
+                <span class="ryd-accordion-chevron" aria-hidden="true">▾</span>
+              </button>
+              <div
+                class="ryd-accordion-panel"
+                id="faq-panel-1"
+                role="region"
+                aria-labelledby="faq-trigger-1"
+                hidden
+              >
+                <p>
+                  In most states, companies have up to 45 days to respond. And
+                  they can request an extension for an additional 45 days to
+                  respond.
+                </p>
+              </div>
+            </div>
+
+            <div class="ryd-accordion-item">
+              <button
+                type="button"
+                class="ryd-accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+                id="faq-trigger-2"
+                data-testid="button-faq-id"
+              >
+                What if they ask for my ID?
+                <span class="ryd-accordion-chevron" aria-hidden="true">▾</span>
+              </button>
+              <div
+                class="ryd-accordion-panel"
+                id="faq-panel-2"
+                role="region"
+                aria-labelledby="faq-trigger-2"
+                hidden
+              >
+                <p>
+                  Some companies will ask for a photo ID to "verify your
+                  identity" before sending the data. It's annoying, but standard
+                  practice. Feel free to redact sensitive numbers before sending
+                  it over.
+                </p>
+              </div>
+            </div>
+
+            <div class="ryd-accordion-item">
+              <button
+                type="button"
+                class="ryd-accordion-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+                id="faq-trigger-3"
+                data-testid="button-faq-what-data"
+              >
+                What kind of data will I get?
+                <span class="ryd-accordion-chevron" aria-hidden="true">▾</span>
+              </button>
+              <div
+                class="ryd-accordion-panel"
+                id="faq-panel-3"
+                role="region"
+                aria-labelledby="faq-trigger-3"
+                hidden
+              >
+                <p>
+                  Usually a chaotic zip file full of CSVs or JSON files. You'll
+                  see every purchase, location ping, ad interaction, and
+                  customer service chat they've logged.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer bar -->
+      <footer class="footer-bar">
+        <a
+          href="https://genzforchange.org/"
+          target="_blank"
+          class="footer-link"
+          data-testid="link-footer-credit"
+        >
+          <span class="footer-credit draw-underline"
+            >made with ❤️ by gen-z for change's meddling kids</span
+          >
+        </a>
+
+        <div class="footer-secondary">
+          <a
+            href="https://www.consumerreports.org/make-the-price-right/"
+            target="_blank"
+            class="footer-link"
+            data-testid="link-footer-cr"
+          >
+            <span class="footer-secondary-credit"
+              >research provided by consumer reports</span
+            >
+          </a>
+          <span class="footer-dot" aria-hidden="true">|</span>
+          <a
+            href="https://airtable.com/appoqjcdQLQO9q2tL/pag53Z9THFAOwPLtT/form"
+            target="_blank"
+            class="footer-link"
+            data-testid="link-footer-report"
+          >
+            <span class="footer-secondary-credit">report an issue</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="companies-live.js"></script>
+  </body>
+</html>

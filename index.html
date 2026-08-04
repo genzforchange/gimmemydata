@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <title>GIMMEMYDATA!</title>
+    <meta name="description" content="What's Your Data Mass Index?" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/tzf2elr.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="images/favicon-180.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="how-it-works.css" />
+    <script>
+      document.documentElement.className += " js";
+    </script>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Background texture -->
+      <div class="bg-texture" aria-hidden="true">
+        <img
+          src="images/background-texture.jpg"
+          alt="background image texture paper"
+        />
+      </div>
+      <!-- Pinned scrollytelling story. The scene markup lives in
+           partials/how-it-works-story.html and is injected here by
+           how-it-works.js; the text below is the no-JS / load-failure
+           fallback. -->
+      <div
+        id="hiw-story-mount"
+        class="hiw-mount"
+        role="region"
+        aria-label="How it works"
+      >
+        <div class="hiw-fallback">
+          <p>
+            So much of what you do every day generates data &mdash; your
+            loyalty card, your apps, your groceries. And once it&rsquo;s
+            collected, it doesn&rsquo;t stay with the company you gave it to.
+            Data brokers buy it and combine it into a profile of you. Your data
+            is their product &mdash; and you&rsquo;ve never even heard of them.
+          </p>
+          <p>
+            From that data, brokers generate thousands of inferences about you:
+            your income, your housing, even your health. These inferences are
+            guesses, and they&rsquo;re often wrong &mdash; but they&rsquo;re
+            packaged and sold as fact.
+          </p>
+          <p>
+            The companies you shop with sell your information to data brokers
+            &mdash; who resell your profile to insurers setting your rates,
+            retailers deciding what price you see at checkout, and government
+            agencies surveilling your neighbors. ICE has bought data broker
+            profiles to access personal and location information it would
+            otherwise need a warrant to obtain.
+          </p>
+          <p>
+            What do they know about you? Is it even correct? You have no way to
+            know &mdash; unless you request your data.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nav bar -->
+      <header class="nav-bar" id="content">
+        <a href="index.html#content" class="nav-logo-link"
+          ><img
+            src="images/gimme%20my%20data%20logo%20wip.png"
+            alt="Gimme My Data — home"
+            class="nav-logo"
+        /></a>
+        <div class="nav-frame">
+          <nav class="nav-pills">
+            <a href="request-your-data.html" class="pill pill-navy"
+              ><span class="draw-underline">Request Your Data</span></a
+            >
+            <!-- <a href="take-action.html" class="pill pill-green"> -->
+            <a href="https://speak4.app/lp/7q013s5y?utm_source=gz4c" target="_blank" rel="noopener" class="pill pill-green"
+              ><span class="draw-underline">Take Action</span></a
+            >
+            <a
+              href="https://www.consumerreports.org/make-the-price-right/
+"
+              class="pill pill-pink"
+              ><span class="draw-underline">Read the Report</span></a
+            >
+            <a href="#" class="pill pill-lime"
+              ><span class="draw-underline">Download Zine</span></a
+            >
+          </nav>
+        </div>
+        <button
+          type="button"
+          class="replay-intro"
+          id="replay-intro"
+          aria-label="Replay intro"
+        >
+          <span class="replay-icon" aria-hidden="true">&#8635;</span>
+          <span class="replay-text">replay intro</span>
+        </button>
+      </header>
+
+      <!-- Hero headline -->
+      <section class="hero">
+        <h1 class="headline">What's Your<br />Data Mass Index?*</h1>
+        <h5>
+          <i
+            >*Coined by Consumer Reports Data Hunter, Annaliese, referring to
+            the amount of information companies, like data brokers, collect on
+            people like you and me.
+          </i>
+        </h5>
+      </section>
+
+      <!-- Intro paragraph -->
+      <section class="intro-text container">
+        <p>
+          “Who cares about data privacy? My data is probably already all over
+          the internet, and I’ve got nothing to hide anyway!” If you’ve ever
+          said (or even thought) something like that last sentence, we’ve got a
+          story for you! Companies have been collecting your data since before
+          you probably even understood the concept of privacy. Companies can use
+          your data against you in subtle, but material ways.
+          <strong>Some might already have.</strong>
+        </p>
+      </section>
+
+      <div class="color-blocks">
+        <a
+          href="request-your-data.html"
+          class="color-block block-sky"
+          data-testid="link-email-copy"
+        >
+          <span class="block-cta"
+            ><span class="draw-underline">Get Your Data</span></span
+          >
+        </a>
+        <!-- <a href="take-action.html" class="color-block block-lime" data-testid="link-email-now"> -->
+        <a
+          href="https://speak4.app/lp/7q013s5y?utm_source=gz4c"
+          target="_blank"
+          rel="noopener"
+          class="color-block block-lime"
+          data-testid="link-email-now"
+        >
+          <span class="block-cta"
+            ><span class="draw-underline">Take Action</span></span
+          >
+        </a>
+      </div>
+
+      <!-- Body text -->
+      <section class="body-text container">
+        <p>
+          Data brokers are companies that collect, aggregate, and sell personal
+          information about you even if you don’t have a direct relationship
+          with them. Data brokers compile this data into a detailed profile that
+          then gets sold to retailers, insurance companies, even to the
+          government. 
+        </p>
+        <p>
+          Here's something they don't advertise: in a growing number of states, you have the legal right to see the data companies hold on you, ask them to delete it, and tell them to stop selling it. You just have to ask and we can show you how.
+        </p>
+      </section>
+
+      <!-- Zine section -->
+      <section class="zine-section">
+        <div class="zine-cta-wrap">
+          <h2 class="zine-cta">Download A Copy Of Our Zine!</h2>
+        </div>
+        <div class="zine-image-wrap">
+          <img class="zine-image" src="images/zine.png" alt="Zine preview" />
+        </div>
+      </section>
+
+      <!-- Bottom split section -->
+      <section class="bottom-split">
+        <div class="bottom-left">
+          One zine covers the whole thing. You can learn about which states are enacting data privacy policies, how to read your DSARs, and much more. Download it to read, or print copies to share with your community.
+          </p>
+        </div>
+        <div class="bottom-right block-pink"></div>
+      </section>
+
+      <!-- Footer bar -->
+      <footer class="footer-bar">
+        <a
+          href="https://genzforchange.org/"
+          target="_blank"
+          class="footer-link"
+          data-testid="link-footer-credit"
+        >
+          <span class="footer-credit draw-underline"
+            >made with ❤️ by gen-z for change's meddling kids</span
+          >
+        </a>
+        <div class="footer-secondary">
+          <a
+            href="https://www.consumerreports.org/make-the-price-right/"
+            target="_blank"
+            class="footer-link"
+            data-testid="link-footer-cr"
+          >
+            <span class="footer-secondary-credit"
+              >research provided by consumer reports</span
+            >
+          </a>
+          <span class="footer-dot" aria-hidden="true">|</span>
+          <a
+            href="https://airtable.com/appoqjcdQLQO9q2tL/pag53Z9THFAOwPLtT/form"
+            target="_blank"
+            class="footer-link"
+            data-testid="link-footer-report"
+          >
+            <span class="footer-secondary-credit">report an issue</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="how-it-works.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600&display=swap');
+
+.ryd-page {
+  --cream:  #f8f7f2;
+  --navy:   #3a4f88;
+  --blue:   #0357a7;
+  --green:  #2e7b47;
+  --pink:   #e24687;
+  --lime:   #cfd78c;
+  --sky:    #cae7f7;
+  --orange: #ff6348;
+  
+  background-color: var(--cream);
+  color: var(--blue);
+  font-family: 'Source Sans 3', 'Avenir Next', Avenir, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: clip;
+}
+
+.ryd-bg-texture {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ryd-bg-texture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  display: block;
+}
+
+.ryd-content {
+  position: relative;
+  z-index: 1;
+}
+
+.ryd-headline {
+  font-family: 'Bebas Neue', 'Thunderhouse Pro', Impact, sans-serif;
+  color: var(--navy);
+  mix-blend-mode: multiply;
+  letter-spacing: 0.01em;
+}
+
+.ryd-draw-underline {
+  position: relative;
+  display: inline-block;
+}
+.ryd-draw-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.08em;
+  width: 100%;
+  height: 0.08em;
+  min-height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
+}
+.ryd-pill:hover .ryd-draw-underline::after { transform: scaleX(1); }
+.ryd-hover-underline:hover .ryd-draw-underline::after { transform: scaleX(1); }
+
+.ryd-card {
+  border: 3px solid var(--navy);
+  box-shadow: 4px 4px 0px var(--navy);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+  background: var(--cream);
+}
+.ryd-card:hover {
+  transform: translateY(-4px) rotate(-1deg) scale(1.02);
+  box-shadow: 8px 8px 0px var(--navy);
+}
+
+.ryd-button {
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--navy);
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px var(--navy);
+}
+.ryd-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--navy);
+}
+.ryd-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px var(--navy);
+}
+
+.ryd-accordion-item {
+  border: 2px solid var(--navy) !important;
+  box-shadow: 3px 3px 0px var(--navy);
+  margin-bottom: 1rem;
+  background: var(--cream);
+}
+
+.ryd-nav-pill {
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  mix-blend-mode: multiply;
+  transition: opacity 0.2s;
+  padding: 0.5rem 1.75rem;
+  display: inline-block;
+}
+.ryd-nav-pill:hover { opacity: 0.85; }
