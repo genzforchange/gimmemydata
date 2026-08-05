@@ -73,8 +73,6 @@
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 2rem;
   opacity: 0;
   transform: translateY(48px);
@@ -99,8 +97,12 @@
   transform: translateY(-48px);
 }
 
+/* auto margins center the content when it fits, but collapse to zero when
+   it's taller than the stage — so the top of the text is never clipped on
+   short viewports (flex `align-items: center` would push it out of view) */
 .js .hiw-story.hiw-animate .scene-inner {
   width: 100%;
+  margin: auto;
 }
 
 /* keep each diagram inside one viewport */
@@ -562,5 +564,80 @@
 @media (max-width: 640px) {
   .scene { padding: 2rem 1.25rem 2.5rem; }
   .scene-visual { margin-top: 1.25rem; }
+}
+
+/* ── small / short viewports: tighten everything so a full scene (kicker +
+   statements + visual) fits inside one small viewport with browser chrome
+   visible, and keep the pinned stage clear of notches and toolbars ── */
+@media (max-width: 640px), (max-height: 700px) {
+  .js .hiw-story.hiw-animate .scene {
+    /* extra bottom room keeps the scroll cue clear of scene text */
+    padding: calc(env(safe-area-inset-top, 0px) + 1.25rem) 1.25rem
+      calc(env(safe-area-inset-bottom, 0px) + 4.25rem);
+  }
+
+  .js .hiw-story.hiw-animate .scene-statement {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .js .hiw-story.hiw-animate .scene-kicker {
+    font-size: 1.6rem;
+  }
+
+  .js .hiw-story.hiw-animate .scene-visual {
+    margin-top: 1rem;
+  }
+
+  .js .hiw-story.hiw-animate .scene-visual + .scene-statement {
+    margin-top: 1rem;
+  }
+
+  .js .hiw-story.hiw-animate .visual-row {
+    gap: 0.9rem;
+  }
+
+  .js .hiw-story.hiw-animate .zi-card { width: 96px; }
+  .js .hiw-story.hiw-animate .zi-phone { width: 48px; }
+  .js .hiw-story.hiw-animate .zi-profile { width: 132px; }
+  .js .hiw-story.hiw-animate .zi-cart-group { width: 92px; }
+  .js .hiw-story.hiw-animate .zi-stream { width: 60px; }
+  .js .hiw-story.hiw-animate .zi-stream--sold { width: 52px; }
+  .js .hiw-story.hiw-animate .zi-meter-group { width: 88px; }
+  .js .hiw-story.hiw-animate .zi-register-group--sm { width: 78px; }
+  .js .hiw-story.hiw-animate .zi-pin { width: 42px; }
+
+  .js .hiw-story.hiw-animate .broker-box {
+    min-width: 120px;
+    padding: 0.7rem 1rem 0.85rem;
+  }
+
+  .js .hiw-story.hiw-animate .hiw-chip {
+    font-size: 0.8rem;
+    padding: 0.32rem 0.85rem;
+  }
+
+  .js .hiw-story.hiw-animate .hiw-stamp {
+    font-size: 1.15rem;
+  }
+
+  .js .hiw-story.hiw-animate .zi-label {
+    font-size: 0.74rem;
+  }
+
+  .js .hiw-story.hiw-animate .buyer-list {
+    gap: 0.8rem;
+  }
+
+  .js .hiw-story.hiw-animate .scene-diagram svg,
+  .js .hiw-story.hiw-animate .scene-visual svg {
+    max-height: 32vh;
+    max-height: 32svh;
+  }
+
+  /* keep the cue inside the safe area at the very bottom of the stage */
+  .js .hiw-story.hiw-animate .scroll-cue {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+  }
 }
 

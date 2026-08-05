@@ -120,6 +120,9 @@
 
     var storyDone = false;
     var ticking = false;
+    // the cue stays up through the first two scenes so visitors know to keep
+    // scrolling; it hides from scene 3 on and comes back when scrolling up
+    var CUE_LAST_SCENE = 1;
     // light scene smoothing: the scene currently on screen, when it last
     // changed, and a timer that re-runs the update once the dwell elapses
     var shownIdx = 0;
@@ -127,6 +130,11 @@
     var dwellTimer = null;
     var collapseTimer = null;
     var settleRaf = null;
+
+    var updateCue = function () {
+      if (!scrollCue) return;
+      scrollCue.classList.toggle('hide', storyDone || shownIdx > CUE_LAST_SCENE);
+    };
 
     var finishCollapse = function () {
       scenes.forEach(function (s) { s.classList.add('in-view'); });
@@ -139,6 +147,7 @@
 
     var collapseStory = function () {
       storyDone = true;
+      updateCue();
       if (dwellTimer) { clearTimeout(dwellTimer); dwellTimer = null; }
       // let the final scene animate out (is-prev fades it upward) instead of
       // cutting straight from a fully visible scene to the page header
@@ -224,6 +233,7 @@
           // still behind the scroll target: show current scene fully
           // revealed and try again once the dwell elapses
           setSceneState(shownIdx, MAX_GROUPS);
+          updateCue();
           scheduleDwellTick();
           return;
         }
@@ -241,16 +251,13 @@
           return;
         }
         setSceneState(shownIdx, MAX_GROUPS);
+        updateCue();
         scheduleDwellTick();
         return;
       }
 
       setSceneState(shownIdx, revealed);
-
-      if (scrollCue) {
-        if (y > 40) scrollCue.classList.add('hide');
-        else scrollCue.classList.remove('hide');
-      }
+      updateCue();
     };
 
     var requestStoryUpdate = function () {
