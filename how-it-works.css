@@ -571,8 +571,10 @@
    visible, and keep the pinned stage clear of notches and toolbars ── */
 @media (max-width: 640px), (max-height: 700px) {
   .js .hiw-story.hiw-animate .scene {
-    /* extra bottom room keeps the scroll cue clear of scene text */
-    padding: calc(env(safe-area-inset-top, 0px) + 1.25rem) 1.25rem
+    /* generous top clearance so the first statement sits well below the
+       mobile browser chrome / notch and is never clipped at the top edge;
+       extra bottom room keeps the scroll cue clear of scene text */
+    padding: calc(env(safe-area-inset-top, 0px) + 4rem) 1.25rem
       calc(env(safe-area-inset-bottom, 0px) + 4.25rem);
   }
 
@@ -638,6 +640,67 @@
   /* keep the cue inside the safe area at the very bottom of the stage */
   .js .hiw-story.hiw-animate .scroll-cue {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+  }
+}
+
+/* ── very short phones (iPhone SE etc.): scene 1 (statement + graphics row +
+   two more statements) is the tallest scene, so tighten it further — smaller
+   graphics, smaller broker box, tighter gaps — and trim the extra top/bottom
+   clearance a bit so the last statements are never cut off. ── */
+@media (max-width: 640px) and (max-height: 700px) {
+  .js .hiw-story.hiw-animate .scene {
+    padding: calc(env(safe-area-inset-top, 0px) + 2.5rem) 1.1rem
+      calc(env(safe-area-inset-bottom, 0px) + 3.25rem);
+  }
+
+  .js .hiw-story.hiw-animate .scene-statement {
+    font-size: 0.92rem;
+    line-height: 1.28;
+  }
+
+  .js .hiw-story.hiw-animate .scene-visual {
+    margin-top: 0.7rem;
+  }
+
+  .js .hiw-story.hiw-animate .scene-visual + .scene-statement {
+    margin-top: 0.7rem;
+  }
+
+  .js .hiw-story.hiw-animate .visual-row {
+    gap: 0.6rem;
+    row-gap: 0.4rem;
+  }
+
+  .js .hiw-story.hiw-animate .zi-item {
+    gap: 0.35rem;
+  }
+
+  .js .hiw-story.hiw-animate .zi-card { width: 76px; }
+  .js .hiw-story.hiw-animate .zi-phone { width: 38px; }
+  .js .hiw-story.hiw-animate .zi-cart-group { width: 74px; }
+  .js .hiw-story.hiw-animate .zi-stream { width: 46px; }
+  .js .hiw-story.hiw-animate .zi-profile { width: 112px; }
+
+  .js .hiw-story.hiw-animate .broker-box {
+    min-width: 96px;
+    padding: 0.5rem 0.75rem 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .js .hiw-story.hiw-animate .broker-title {
+    font-size: 1rem;
+  }
+
+  .js .hiw-story.hiw-animate .broker-rows {
+    gap: 0.3rem;
+  }
+
+  .js .hiw-story.hiw-animate .broker-rows span {
+    height: 6px;
+  }
+
+  .js .hiw-story.hiw-animate .zi-label {
+    font-size: 0.68rem;
   }
 }
 

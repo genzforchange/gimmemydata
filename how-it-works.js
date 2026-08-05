@@ -193,10 +193,19 @@
       }, remaining + 30);
     };
 
+    // Cache the viewport height used by the scrub math. Reading the live
+    // visualViewport height on every scroll tick made progress oscillate
+    // while the mobile URL bar animated (scrubRegion changed mid-scroll, so
+    // the computed scene index flipped back and forth across a boundary,
+    // and every backward flip reset the dwell timer — the story could get
+    // permanently stuck at scene 1). The cache only updates on "real"
+    // resizes (rotation, split-screen), matching the URL-bar resize guard.
+    var vhCache = getViewportHeight();
+
     var updateStory = function () {
       ticking = false;
       if (storyDone) return;
-      var vh = getViewportHeight();
+      var vh = vhCache;
       var trackHeight = story.offsetHeight;
       var scrubRegion = trackHeight - vh;
       var y = window.scrollY || window.pageYOffset || 0;
@@ -281,6 +290,9 @@
       lastW = w;
       lastH = h;
       if (isTouch && heightOnly) return;
+      // real resize (rotation, split-screen, desktop window resize):
+      // refresh the cached height used by the scrub math
+      vhCache = h;
       requestStoryUpdate();
     };
     window.addEventListener('resize', onResize, { passive: true });

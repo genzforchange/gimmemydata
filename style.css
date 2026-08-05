@@ -47,8 +47,10 @@ html, body {
   position: fixed;
   inset: 0;
   width: 100vw;
+  /* span the LARGE viewport so the texture still covers the strip revealed
+     when the mobile URL/tab bar collapses (top or bottom placement) */
   height: 100vh;
-  height: 100svh;
+  height: 100lvh;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
