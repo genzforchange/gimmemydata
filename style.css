@@ -34,7 +34,6 @@ html, body {
 /* ── page wrapper ── */
 .page {
   position: relative;
-  max-width: 1440px;
   margin: 0 auto;
   /* overflow-x: clip prevents the horizontal scrollbar from the rotated zine
      WITHOUT creating a scroll container (which `overflow: hidden` would),
@@ -315,7 +314,7 @@ html, body {
 .zine-cta {
   font-family: 'thunderhouse-pro', sans-serif;
   font-size: clamp(3rem, 7vw, 6rem);
-  color: var(--orange);
+  color: var(--pink);
   line-height: 1.05;
   text-align: center;
   transform: rotate(-2deg);
@@ -366,7 +365,7 @@ html, body {
 }
 
 .block-pink {
-  background-color: var(--pink);
+  /* background-color: var(--pink); */
   mix-blend-mode: multiply;
 }
 
@@ -613,12 +612,13 @@ html, body {
   margin-bottom: 1rem;
   border: 2px solid var(--navy);
   transform: rotate(-2deg);
+  
 }
 
 .ryd-tag-blue   { background-color: var(--blue);   color: var(--cream); }
 .ryd-tag-lime   { background-color: var(--lime);   color: var(--navy); }
 .ryd-tag-pink   { background-color: var(--pink);   color: var(--cream); }
-.ryd-tag-orange { background-color: var(--orange); color: var(--navy); }
+.ryd-tag-orange { background-color: var(--orange); color: var(--cream); }
 .ryd-tag-sky    { background-color: var(--sky);    color: var(--navy); }
 .ryd-tag-green  { background-color: var(--green);  color: var(--cream); }
 .ryd-tag-navy   { background-color: var(--navy);   color: var(--cream); }
@@ -654,7 +654,7 @@ html, body {
   font-family: 'thunderhouse-pro', sans-serif;
   font-size: 1.875rem;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.05em;
   color: currentColor;
   margin: 0;
   font-weight: 400;
